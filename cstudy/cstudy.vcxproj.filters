@@ -33,6 +33,15 @@
     <ClCompile Include="funcStudy.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="funcStudy2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="arrayStudy.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stringStudy.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">

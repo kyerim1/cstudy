@@ -2,17 +2,52 @@
 #include <stdlib.h>
 #include <time.h>
 
-/*   Sleep(1000);
+//   Sleep(1000);
 
-void draw();  그림 그리는 함수
-int game();  게임 시작함수
-void result(int select);  결과 출력함수
+void draw();  //그림 그리는 함수
+int game();  //게임 시작함수
+void result(int select);  //결과 출력함수
 
 void main() {
-	game();
+	int select = 0;
+	printf("야바위 게임 함수호출");
+	select = game();
+	result(select);
+}
+void draw() {
+	printf("┌──────┐     ┌──────┐     ┌──────┐     ┌──────┐\n");
+	printf("│      │     │      │     │      │     │      │\n");
+	printf("│   1  │     │   2  │     │   3  │     │   4  │\n");
+	printf("│      │     │      │     │      │     │      │\n");
+	printf("└──────┘     └──────┘     └──────┘     └──────┘\n");
+}
+int game() {
+	int select;
+	printf("자~아 돈 놓고 돈 먹기 \n");
+	printf("지나가는 개도 다 맞추는 그 게임\n\n");
+	printf("'그리기 함수 호출중");
+	for (int i = 1; i <= 10; i++) { Sleep(500); printf("."); }
+	printf("'\n");
+	draw();
+	printf("\n왕을 찍으세요 왕!!!! : ");
+	scanf_s("%d", &select);
+	return select;
+}
+void result(int select) {
+	int com = rand() % 4 + 1;
+	if (select == com) {
+		printf("정답!! \n\n\n");
+	}
+	else {
+		printf("당신의 재산이 모두 몰수 되었습니다.\n\n\n");
+	}
 }
 
-*/
+
+
+
+
+
 //
 //
 //int rec_func(int n) {
@@ -171,3 +206,45 @@ void main() {
 
 
 
+//
+//
+//void draw() {
+//
+//	printf("┌──────┐     ┌──────┐     ┌──────┐     ┌──────┐\n");
+//	printf("│      │     │      │     │      │     │      │\n");
+//	printf("│   1  │     │  2   │     │  3   │     │  4   │\n");
+//	printf("│      │     │      │     │      │     │      │\n");
+//	printf("└──────┘     └──────┘     └──────┘     └──────┘\n");
+//
+//}
+//
+//
+//int game() {
+//	int select;
+//	printf("자~아 돈놓고 돈 먹기 \n");
+//	Sleep(1000);
+//	printf("지나가는 개도 다 맞추는 그 게임\n\n");
+//	printf("'그리기 함수호출중");
+//	for (int i = 1; i <= 10; i++) { Sleep(500); printf("."); }
+//	printf("'\n");
+//	draw();
+//	printf("\n왕을 찍으세요 왕!!!  :   ");
+//	scanf_s("%d", &select);
+//	return select;
+//}
+//void result(int select) {
+//	int com = rand() % 4 + 1;
+//	if (select == com) {
+//		printf("정답!!!\n\n\n");
+//	}
+//	else {
+//		printf("당신의 재산이 모두 몰수 되었습니다.\n\n\n");
+//	}
+//}
+//
+//void main() {
+//	int select = 0;
+//	printf("야바위 게임 함수호출");
+//	select = game();
+//	result(select);
+//}

@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -26,4 +27,44 @@ void main() {
 	cmp = strcmp("banana", "apple");
 	printf(" %d \n", cmp);
 
+	//문자열 검색
+	printf("%p \n", strchr("banana", 'n'));
+
+	printf("%d \n", strspn("banana1234", "1234"));
+	printf("%d \n", strspn("1234banana", "1234"));
+
+	printf("%s  \n", strstr("i like banana", "banana"));
+	printf("%s  \n", strstr("i like banana", "orange"));
+
+	char name[20];
+
+	printf("이름 : ");
+	//scanf("%s", name);
+	gets(name);  //gets_s(name , sizeof(name));
+	//printf(" %s \n",name);
+	puts(name);  // \n
+	//char aa[100] = name + "입니다";
+	//puts(name + "입니다");
+
+	puts(strcat(name, "입니다"));
+
+
+
+	// 문자 입출력
+	char ch=0;
+	printf("문자 입력 : ");
+	//ch=getchar();
+	//printf("%c  \n", ch);
+	
+	ch = getch();
+	printf("%c  \n", ch);
+	putchar(ch);
+	putch(ch);
 }
+
+
+
+
+// scanf_s("%s", name); -> 1바이트 공간에 저장하겠다.
+
+

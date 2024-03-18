@@ -5,6 +5,68 @@
 #include <string.h>
 
 
+
+
+
+//
+//enum menu { save=6, load, end };
+//
+//void main() {
+//
+//	enum menu m;
+//	printf("1. 저장    2. 불러오기    3. 종료 :");
+//	scanf("%d", (int*)&m);
+//	//m = save;
+//	
+//	switch (m) {
+//		case save:
+//			printf("저장"); break;
+//		case load:
+//			printf("불러오기"); break;
+//		case end:
+//			printf("종료 "); break;
+//	}
+//
+//
+//
+//
+//	/*int m1 = 1;
+//	switch (m1) {
+//		case 1:
+//			printf("저장"); break;
+//		case 2:
+//			printf("불러오기"); break;
+//		case 3:
+//			printf("종료 "); break;
+//
+//	}*/
+//
+//
+//
+//}
+
+
+
+//
+//union test {
+//	int a;
+//	char b;
+//};
+//void main() {
+//	union test t1;
+//	t1.a = 0x321;
+//	if (t1.b == 35) {
+//		printf("리틀 엔디안");
+//	}
+//	else {
+//		printf("빅엔디안");
+//	}
+//	printf("%d  %d  \n", t1.a, t1.b);
+//}
+//
+
+
+
 /*
 	영화 검색
 	1. 영화제목, 개봉년도, 감독, 관람등급 
@@ -21,62 +83,95 @@
 
 */
 
+//
+//union info { //4byte
+//	int num;
+//	char ch;
+//	float fnum;
+//	금융인증
+//		네이버인증
+//		토스 인증
+//		카카오 인증
+//};
+//
+//struct test { //12byte
+//	int num;
+//	char ch;
+//	float fnum;
+//	금융인증
+//	네이버인증
+//	토스 인증
+//	카카오 인증
+//};
+//
+//void main() {
+//	struct test t1;
+//	t1.num = 20;   t1.ch = 'a';  t1.fnum = 3.14;
+//	printf("%d %c %.2f \n", t1.num, t1.ch, t1.fnum);
+//
+//	union info u1;
+//	u1.num = 20; u1.ch = 130;  u1.fnum = 3.14;
+//	printf("%d  %c %.2f\n", u1.num, u1.ch, u1.fnum);
+//}
 
-
-
-typedef struct item {
-	int num;
-	struct item* next; // 내부 참조구조체
-}item;
-
-
-void main() {
-	int num=0;
-	item* start = NULL, *cur=NULL;
-	do {
-		printf("정수 입력 (0-종료) : ");
-		scanf("%d", &num);
-		if (num != 0) {
-			item* temp = (item*)malloc(sizeof(item));
-			temp->num = num;
-			temp->next = NULL;
-			if (start == NULL) { start = temp;  cur = temp; }
-			else {
-				cur->next = temp;
-				cur = temp;
-			}
-		}
-
-	} while (num != 0);
-	
-	//지그까지 입력 한 정수 출력
-	cur = start;
-	for (int i = 0; cur!=NULL ; i++) {
-		if (i % 5 == 0 && i != 0)puts("");
-		printf("%d   ", cur->num );
-		cur = cur->next;
-	}
-	
-	
-	
-	
-	
-	/*item* p = (item*)malloc(  5*sizeof(struct item) );
-	p[0].num = 10;
-	p[1].num = 20;
-	p[2].num = 30;
-	p[3].num = 40;
-	p[4].num = 50;
-
-	for (int i = 0; i < 5; i++) {
-		printf("%d   ", p[i].num);
-	}*/
-}
 
 
 
 
 //
+//typedef struct item {
+//	int num;
+//	struct item* next; // 내부 참조구조체
+//}item;
+//
+//
+//void main() {
+//	int num=0;
+//	item* start = NULL, *cur=NULL;
+//	do {
+//		printf("정수 입력 (0-종료) : ");
+//		scanf("%d", &num);
+//		if (num != 0) {
+//			item* temp = (item*)malloc(sizeof(item));
+//			temp->num = num;
+//			temp->next = NULL;
+//			if (start == NULL) { start = temp;  cur = temp; }
+//			else {
+//				cur->next = temp;
+//				cur = temp;
+//			}
+//		}
+//
+//	} while (num != 0);
+//	
+//	//지그까지 입력 한 정수 출력
+//	cur = start;
+//	for (int i = 0; cur!=NULL ; i++) {
+//		if (i % 5 == 0 && i != 0)puts("");
+//		printf("%d   ", cur->num );
+//		cur = cur->next;
+//	}
+//	
+//	
+//	
+//	
+//	
+//	/*item* p = (item*)malloc(  5*sizeof(struct item) );
+//	p[0].num = 10;
+//	p[1].num = 20;
+//	p[2].num = 30;
+//	p[3].num = 40;
+//	p[4].num = 50;
+//
+//	for (int i = 0; i < 5; i++) {
+//		printf("%d   ", p[i].num);
+//	}*/
+//}
+//
+//
+//
+//
+////
 //은행명과 이름
 //은행 명  이름
 //농협    김민수

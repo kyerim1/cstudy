@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="소스 파일\NewFilter1">
-      <UniqueIdentifier>{5e10d4c6-f0cb-4783-b2be-44e74f74e7ec}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.c">
@@ -78,12 +75,45 @@
     <ClCompile Include="structStudy.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="structTest1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="fileStudy.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="bookMain.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="bookEnum.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="bookFile.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="bookNew.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="bookRent.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="bookReturn.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="bookFunc.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="bookData.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="game.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="book.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,6 +2,10 @@
 
 void main() {
 	list = file_load();
+	if (list == NULL) {
+		printf("파일 읽기 실패"); return;
+	}
+	
 	while (1) {
 		system("cls");
 

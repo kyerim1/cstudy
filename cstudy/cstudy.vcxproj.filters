@@ -105,6 +105,24 @@
     <ClCompile Include="bookData.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="cardGame.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="blackJack.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="gameInit.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="cardDraw.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="handOut.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="blackJackFile.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -114,6 +132,9 @@
       <Filter>소스 파일</Filter>
     </ClInclude>
     <ClInclude Include="book.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="card.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>

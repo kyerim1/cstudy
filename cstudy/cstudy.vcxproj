@@ -137,14 +137,20 @@
     <ClCompile Include="arrayStudy2.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="blackJack.c" />
+    <ClCompile Include="blackJackFile.c" />
     <ClCompile Include="bookData.c" />
     <ClCompile Include="bookEnum.c" />
     <ClCompile Include="bookFile.c" />
     <ClCompile Include="bookFunc.c" />
-    <ClCompile Include="bookMain.c" />
+    <ClCompile Include="bookMain.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="bookNew.c" />
     <ClCompile Include="bookRent.c" />
     <ClCompile Include="bookReturn.c" />
+    <ClCompile Include="cardDraw.c" />
+    <ClCompile Include="cardGame.c" />
     <ClCompile Include="fileStudy.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -158,7 +164,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="gameFunc.c" />
+    <ClCompile Include="gameInit.c" />
     <ClCompile Include="gameStoryFunc.c" />
+    <ClCompile Include="handOut.c" />
     <ClCompile Include="initial.c" />
     <ClCompile Include="pointerStudy1.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
@@ -199,6 +207,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="book.h" />
+    <ClInclude Include="card.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>

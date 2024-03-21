@@ -5,6 +5,7 @@
 #include <time.h>
 #include <string.h>
 #include <math.h>
+#include <Windows.h>
 
 #define dealerMax 17
 #define spade "♠"
@@ -27,8 +28,10 @@ typedef struct Money {
 }Money;
 
 typedef struct Player {
+	int stay;
 	int num;   // 플레이어 고유 번호
 	int score;  // 플레이어의 현재 카드 점수
+	int betting; // 내기돈
 	struct Money money; //플레이어 금액
 	struct Card *player_card[8];  // 플레이어 현재 보유 카드
 }Player;
@@ -52,13 +55,16 @@ void save();//
 
 //blackJack.c
 void play(); // 게임 시작
+void gotoxy(int x, int y);
 
 //handOut.c
+void dealer_card(); //딜러 카드 출력
 void shuffle(); // 카드 섞기
 void deal(); // 카드 배분
 void betting();  // 배팅
 int stayOrHit(int turn); // 플레이어 턴에 추가 카드 받을것인지
 void dealer(int turn); // 딜러 턴
+int endGame();
 
 //cardDraw.c
-void drawCard(int num, int shape); // 카드 그리기 - 한장만 화면에 그리기
+void drawCard(int num, int shape, int x, int y); // 카드 그리기 - 한장만 화면에 그리기

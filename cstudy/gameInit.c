@@ -56,6 +56,9 @@ static void player_set() {
 			player[playerCnt].money.lost = 0;
 			player[playerCnt].money.win = 0;
 			player[playerCnt].score = 0;
+			player[playerCnt].stay = 0;
+			player[playerCnt].betting = 0;
+			playerCnt++;
 		}
 		//새 참가자 설정
 		for (int i = playerCnt!=0?playerCnt : 1 ; i < numbers; i++) {
@@ -65,8 +68,16 @@ static void player_set() {
 			player[i].money.lost = 0;
 			player[i].money.win = 0;
 			player[i].score = 0;
+			player[i].stay = 0;
+			player[i].betting = 0;
 			playerCnt++;
 		}
-
 	}
+
+	for (int i = 0; i < playerCnt; i++) {
+		for (int k = 0; k < 8; k++) {
+			player[i].player_card[k] = NULL;
+		}
+	}
+
 }

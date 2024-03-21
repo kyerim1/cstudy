@@ -66,6 +66,7 @@ void betting() {
 			printf("올인 하셨습니다.\n 배팅하시겠습니까?(y/n)");
 			if (getch() == 'n') {
 				i--; player[i].money.cash += player[i].betting;
+				printf("\n");
 			}
 		}
 	}

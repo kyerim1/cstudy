@@ -49,7 +49,7 @@ void init(); //초기 설정-52개 카드 생성, 참가자 설정, 파일로드
 void board(); // 게임 화면 그리기 
 
 //blackJackFile.c  - 파일명 blackJList.c
-void load(); //
+int load(); //
 void save();//
 // Player구조체의 num과 money 내용 저장, 불러오기
 

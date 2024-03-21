@@ -1,7 +1,7 @@
 #include "card.h"
 
 static void make_card(); // 카드 생성
-static void player_set(); // 플레이어 설정
+static void player_set(int maxnum); // 플레이어 설정
 
 void start() {
 	printf("\x1b[31m"); printf("\x1b[43m");
@@ -15,9 +15,9 @@ void start() {
 	play(); // 게임 시작
 }
 void init() {
-	load(); // 파일 불러오기
+	int maxnum=load(); // 파일 불러오기
 	make_card();
-	player_set();
+	player_set(maxnum);
 }
 void board() {
 	Sleep(2000);
@@ -35,7 +35,7 @@ static void make_card() {
 		}
 	}
 }
-static void player_set() {
+static void player_set(int maxnum) {
 	int numbers, mynum = 0;
 	
 	printf("\n 참가인원 설정 (최대4명): ");
@@ -59,11 +59,12 @@ static void player_set() {
 			player[playerCnt].stay = 0;
 			player[playerCnt].betting = 0;
 			playerCnt++;
+			maxnum = 1;
 		}
 		//새 참가자 설정
 		for (int i = playerCnt!=0?playerCnt : 1 ; i < numbers; i++) {
 			player = (Player*)realloc(player, sizeof(Player) * (i+1));
-			player[i].num = player[i-1].num+1;
+			player[i].num = ++maxnum;
 			player[i].money.cash = 500000;
 			player[i].money.lost = 0;
 			player[i].money.win = 0;

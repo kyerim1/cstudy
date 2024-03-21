@@ -62,7 +62,7 @@ void betting() {
 		}
 		player[i].money.cash -= player[i].betting; //배팅 금액 차감
 
-		if (player[i].betting == player[i].money.cash) {
+		if (player[i].money.cash==0) {
 			printf("올인 하셨습니다.\n 배팅하시겠습니까?(y/n)");
 			if (getch() == 'n') {
 				i--; player[i].money.cash += player[i].betting;
@@ -85,6 +85,12 @@ int stayOrHit(int turn) {
 			if (score_sum(p->player_card) > 21) {
 				p->stay = 1;
 				printf("\x1b[31m"); printf("\n %d 플레이어 다이!!! ", p->num);
+				printf("\x1b[0m");
+				Sleep(1000);
+			}
+			if (score_sum(p->player_card) == 21) {
+				p->stay = 1;
+				printf("\x1b[31m"); printf("\n %d 플레이어 블랙잭!!! ", p->num);
 				printf("\x1b[0m");
 				Sleep(1000);
 			}
